@@ -19,8 +19,8 @@ if __name__=='__main__':          # проверяет, что модуль бы
         color='purple',           #задать фиолетовый цвет графика
         label = 'cos(x/6)*lg(x+1)'#имя графика
     )
-    mpp.xlabel('x', fontsize=15) #подписать ось абсцисс
-    mpp.ylabel('y', fontsize=15) #подписать ось ординат
+    mpp.xlabel('x', fontsize=14) #подписать ось абсцисс
+    mpp.ylabel('y', fontsize=14) #подписать ось ординат
     mpp.grid(True, which='major', color='grey', linestyle='dashed')#задать сетку
     mpp.legend(loc='best')       #задать легенду графика
     mpp.show()                   #показать график
