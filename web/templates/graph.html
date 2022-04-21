@@ -1,21 +1,18 @@
 {% extends "base.html" %}
 
     {% block content %}
+
+
 <form action="/graph" method="GET">
-            <p>
-                <label for="number">Выберите модель:</label>
-                <select id="number" name="graphic" required>
-                    <option></option>
-                    <option value="{{graphic}}" name = "exponential">Экспонента</option>
-                    <option value="{{graphic}}" name = "linear">линейная</option>
-                    <option value="{{graphic}}" name = "quadratic">квадратичная</option>
-                </select>
-            </p>
-  <input type="text" value="{{name}}" name="name" />
+    <label>
+        <input type="text" value="{{name}}" name="name" />
+    </label>
     <input type="submit" value="Отправить" />
 </form>
 <section>
-  <h2>Heatmap</h2>
-  <img src="data:image/png;base64, {{ plot_url }}">
+    <b><p>Значения вводятся строго следующим образом: сначала через пробел идут значения по оси абсцисс, затем после запятой идут значения по оси ординат через пробел. Число значений по X и Y должны быть равны.<p><b>Например: 0 0.9 1.8 2.8 3.8 4.8 5.7, 3.8 2.3 1.4 0.8 0.5 0.3 0.</b></p> </b>
+    <h2>Ваш график:</h2>
+  <img src="data:image/png;base64, {{ plot_url }}" alt="">
+    <p><b>P.S.: Пока только экспонента, но вы не расстраивайтесь.</b></p>
 </section>
     {% endblock %}

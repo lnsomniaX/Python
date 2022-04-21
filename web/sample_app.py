@@ -2,115 +2,93 @@
 # -*- coding: utf-8 -*-
 
 # A very simple Flask Hello World app for you to get started with...
-import numpy as np
-import flask
-from flask import Flask, request
-import scipy.optimize
-import matplotlib.pyplot as plt
-from io import BytesIO
+# 0 0.9 1.8 2.8 3.8 4.8 5.7, 3.8 2.3 1.4 0.8 0.5 0.3 0.2
 import base64
+from io import BytesIO
+
+import flask
+import matplotlib.pyplot as plt
+import numpy as np
 import requests
+import scipy.optimize
+from flask import Flask, render_template, \
+    request
 
 app = Flask(__name__, static_folder="static", static_url_path="", template_folder="templates")
 
 
-@app.context_processor
-def inject_globals():
-    return {
-        "isclever": [
-            "глупый",
-            "умный",
-            "маленький"
-        ]
-    }
-
-
 @app.route('/')
-def root():
-    return flask.render_template(
-        'index.html'
-    )
+def index():
+    return render_template(
+        'graph_select.html',
+        data=[{'name': 'exponential'}, {'name': 'linear'}, {'name': 'quadratic'}])
 
 
-@app.route('/name', methods = ['GET', 'POST'])
-def hello_name():
-    if request.method == 'GET':
-        name_param=request.args.get('name')
-    elif request.method == 'POST':
-        name_param=request.form.get('name')
-
-    if name_param is None:
-        name_param="Анонимус"
-    print(name_param)
-    return flask.render_template(
-        'name.html',
-        name=name_param,
-        method=request.method
-    )
-
-
-@app.route('/graph', methods = ['GET'])
-def graph():
-    graphic_param = request.args.get('graphic')
+@app.route("/graph", methods=['GET', 'POST'])
+def test():
     name_param = request.args.get('name')
-    plot_url=0
-    if graphic_param == 'exponential':
-        img = BytesIO()
-        if name_param is None:
-            CAT_IMAGE_URL = 'https://i.imgur.com/xYUVlZ0.jpg'
+    request.form.get('graph_select')
+    graph = 'exponential'
+    plot_url = 0
+    print(name_param)
 
-            response = requests.get(CAT_IMAGE_URL)
-            with open('test.png', 'wb') as f:
-                f.write(response.content)
-            plot_url = base64.b64encode(open('test.png', 'rb').read()).decode('utf-8')
+    if name_param is not None:
+        csfont = {'fontname': 'Liberation Serif'}
+        print(name_param)
+        p = name_param.split(', ')
+        x = np.array(p[0].split())
+        number = []
+        for item in x:
+            number.append(float(item))
+        x = np.array(number)
 
+        y = np.array(p[1].split())
+        number = []
+        for item in y:
+            number.append(float(item))
+        y = np.array(number)
 
-        if name_param is not None:
-            print(name_param)
-            A = name_param.split(', ')
-            X = A[0]
-            X = X.split()
-            X = np.array(X)
-            number = []
-            for item in X:
-                number.append(float(item))
-            X = number
-            X = np.array(X)
+        plt.scatter(x, y, color='blue', s=3, linewidth=2.0)
+        c = 0
 
-            Y = A[1]
-            Y = Y.split()
-            Y = np.array(Y)
-            number = []
-            for item in Y:
-                number.append(float(item))
-            Y = number
-            Y = np.array(Y)
+        for item in x:
+            c += 1
 
-            plt.scatter(X, Y, color='blue', s=3, linewidth=2.0)
-            C = 0
+        if graph == 'exponential':
+            def exp(x1, a, b):
+                return a * np.exp(b * x1)
 
-            for item in X:
-                C += 1
-            def exp(x, a, b):
-                 return a * np.exp(b * x)
-
-            popt, cov = scipy.optimize.curve_fit(exp, X, Y)
+            popt, cov = scipy.optimize.curve_fit(exp, x, y)
             a, b = popt
 
-            first_X = np.linspace(X[0], X[C-1], 100)
+            first_X = np.linspace(x[0], x[c - 1], 100)
 
             plt.plot(first_X, a * np.exp(first_X * b), color='green', label='Экспоненциальное приближение'
-                                                                             ' зависимости напряжения на конденсаторе'
-                                                                             ' от времени')
-            plt.savefig(img, format='png')
-            plt.close()
-            img.seek(0)
-            plot_url = base64.b64encode(img.getvalue()).decode('utf8')
-    return flask.render_template(
-        'graph.html',
-        graphic=graphic_param,
-        name=name_param,
-        plot_url=plot_url,
-    )
+                     )
+        img = BytesIO()
+        plt.xlabel('X', fontsize=14, **csfont)
+        plt.ylabel('Y', fontsize=14, **csfont)
+        plt.grid()
+        plt.legend(loc='best')
+        plt.minorticks_on()
+        plt.savefig(img, format='png')
+        plt.close()
+        img.seek(0)
+        plot_url = base64.b64encode(img.getvalue()).decode('utf8')
+
+    if name_param is None:
+        cat_image_url = 'https://i.imgur.com/xYUVlZ0.jpg'
+
+        response = requests.get(cat_image_url)
+        with open('test.png', 'wb') as f:
+            f.write(response.content)
+        plot_url = base64.b64encode(open('test.png', 'rb').read()).decode('utf-8')
+        name_param = ''
+
+    return flask.render_template('graph.html',
+                                 name=name_param,
+                                 plot_url=plot_url, )
+
+
 if __name__ == '__main__':
-   app.run(debug = True)
+    app.run(debug=True)

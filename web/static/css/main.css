@@ -1,0 +1,21 @@
+body{
+background-image: url('images/background_1(1).jpg');
+font: 20px Tahoma;
+color: #000000;
+text-shadow: #ffffff 1px 0px 1px, #ffffff 0px 1px 1px, #ffffff 0px -1px 1px, #ffffff -1px 0px 1px;}
+h1 {
+  text-transform: uppercase;
+  font-family: Arial Black;
+  text-align: center;
+  font-size:2.5rem;
+
+  -webkit-text-stroke: 1px black;
+   color: white;
+    text-shadow:
+       2px  2px 0 #000,
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
+
+}
