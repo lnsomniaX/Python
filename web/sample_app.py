@@ -5,8 +5,9 @@
 # 0 0.9 1.8 2.8 3.8 4.8 5.7, 3.8 2.3 1.4 0.8 0.5 0.3 0.2
 import base64
 from io import BytesIO
-
 import flask
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import requests
