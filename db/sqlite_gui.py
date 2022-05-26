@@ -14,7 +14,7 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS programs (
 
 
 def update():
-    c = dbms.connect("Python Grades.db")
+    c = dbms.connect("python_grades.db")
     cur = c.cursor()
 
     grade_id = delete_box.get()
@@ -41,7 +41,7 @@ def edit():
     editor.title('Edit grades')
     editor.iconbitmap()
 
-    con = dbms.connect("Python Grades.db")
+    con = dbms.connect("python_grades.db")
     curs = con.cursor()
 
     grade_id = delete_box.get()
@@ -72,7 +72,7 @@ def edit():
 
 
 def delete():
-    connect = dbms.connect("Python Grades.db")
+    connect = dbms.connect("python_grades.db")
     curs = connect.cursor()
 
     curs.execute("DELETE from programs WHERE oid= " + delete_box.get())
@@ -83,7 +83,7 @@ def delete():
 
 
 def submit():
-    conn = dbms.connect("Python Grades.db")
+    conn = dbms.connect("python_grades.db")
     cursor = conn.cursor()
     cursor.execute("INSERT INTO programs VALUES (:grade, :name)",
                    {
@@ -99,7 +99,7 @@ def submit():
 
 
 def query():
-    conn = dbms.connect("Python Grades.db")
+    conn = dbms.connect("python_grades.db")
     cursor = conn.cursor()
 
     cursor.execute("SELECT *, oid FROM programs")
@@ -152,7 +152,7 @@ submit_button = Button(root, text='Внести оценку в базу', comma
 submit_button.grid(row=2, column=0, columnspan=3, pady=10, padx=10, ipadx=100)
 query_btn = Button(root, text='Показать все оценки', command=query)
 query_btn.grid(row=3, column=0, columnspan=3, pady=10, padx=10, ipadx=137)
-dlt_btn = Button(root, text='Удалить оценку', command=delete)
+dlt_btn = Button(root, text='Удалиwь оценку', command=delete)
 dlt_btn.grid(row=6, column=0, columnspan=3, pady=10, padx=10, ipadx=136)
 edit_btn = Button(root, text='Изменить оценки', command=edit)
 edit_btn.grid(row=7, column=0, columnspan=3, pady=10, padx=10, ipadx=143)
