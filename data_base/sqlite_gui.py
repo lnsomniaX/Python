@@ -5,7 +5,7 @@ root = Tk()
 root.title('Python Grades')
 root.iconbitmap()
 
-conn = dbms.connect("Python Grades.db")
+conn = dbms.connect("python_grades.db")
 cursor = conn.cursor()
 cursor.execute("""CREATE TABLE IF NOT EXISTS programs (
             grade integer not null,
