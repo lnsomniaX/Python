@@ -10,4 +10,4 @@ a = numpy.array([
 
 b = numpy.array([5, 6, 7, 8], dtype=float)
 
-print(module.gauss(a, b))
+print(gauss_module(a, b))
