@@ -35,7 +35,6 @@ def gauss(a, b):
 
     def backward():
         c, g = forward()
-        print(c, g)
         n = len(a)
         m = len(a[0])
         x = numpy.zeros(n, dtype=float)
