@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "gauss_module",
+        "name": "gauss_cython",
         "sources": [
-            "gauss_module.pyx"
+            "gauss_cython.pyx"
         ]
     },
-    "module_name": "gauss_module"
+    "module_name": "gauss_cython"
 }
 END: Cython Metadata */
 
@@ -702,8 +702,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__gauss_module
-#define __PYX_HAVE_API__gauss_module
+#define __PYX_HAVE__gauss_cython
+#define __PYX_HAVE_API__gauss_cython
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -914,20 +914,20 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "gauss_module.pyx",
+  "gauss_cython.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss;
+struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss;
 
-/* "gauss_module.pyx":4
+/* "gauss_cython.pyx":4
  * 
  * 
  * def gauss(a, b):             # <<<<<<<<<<<<<<
  *     a = a.copy()
  *     b = b.copy()
  */
-struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss {
+struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss {
   PyObject_HEAD
   PyObject *__pyx_v_a;
   PyObject *__pyx_v_b;
@@ -1349,20 +1349,10 @@ static void __pyx_insert_code_object(int code_line, PyCodeObject* code_object);
 static void __Pyx_AddTraceback(const char *funcname, int c_line,
                                int py_line, const char *filename);
 
-/* Print.proto */
-static int __Pyx_Print(PyObject*, PyObject *, int);
-#if CYTHON_COMPILING_IN_PYPY || PY_MAJOR_VERSION >= 3
-static PyObject* __pyx_print = 0;
-static PyObject* __pyx_print_kwargs = 0;
-#endif
-
 /* GCCDiagnostics.proto */
 #if defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 6))
 #define __Pyx_HAS_GCC_DIAGNOSTIC
 #endif
-
-/* PrintOne.proto */
-static int __Pyx_PrintOne(PyObject* stream, PyObject *o);
 
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
@@ -1393,13 +1383,13 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'gauss_module' */
-static PyTypeObject *__pyx_ptype_12gauss_module___pyx_scope_struct__gauss = 0;
-#define __Pyx_MODULE_NAME "gauss_module"
-extern int __pyx_module_is_main_gauss_module;
-int __pyx_module_is_main_gauss_module = 0;
+/* Module declarations from 'gauss_cython' */
+static PyTypeObject *__pyx_ptype_12gauss_cython___pyx_scope_struct__gauss = 0;
+#define __Pyx_MODULE_NAME "gauss_cython"
+extern int __pyx_module_is_main_gauss_cython;
+int __pyx_module_is_main_gauss_cython = 0;
 
-/* Implementation of 'gauss_module' */
+/* Implementation of 'gauss_cython' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_reversed;
 static const char __pyx_k_a[] = "a";
@@ -1414,26 +1404,22 @@ static const char __pyx_k_l[] = "l";
 static const char __pyx_k_m[] = "m";
 static const char __pyx_k_n[] = "n";
 static const char __pyx_k_x[] = "x";
-static const char __pyx_k_end[] = "end";
 static const char __pyx_k_sum[] = "sum";
 static const char __pyx_k_copy[] = "copy";
-static const char __pyx_k_file[] = "file";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_gauss[] = "gauss";
 static const char __pyx_k_numpy[] = "numpy";
-static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_zeros[] = "zeros";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_forward[] = "forward";
 static const char __pyx_k_backward[] = "backward";
 static const char __pyx_k_reversed[] = "reversed";
-static const char __pyx_k_gauss_module[] = "gauss_module";
-static const char __pyx_k_was_imported[] = "was imported";
-static const char __pyx_k_gauss_module_pyx[] = "gauss_module.pyx";
+static const char __pyx_k_gauss_cython[] = "gauss_cython";
+static const char __pyx_k_gauss_cython_pyx[] = "gauss_cython.pyx";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_gauss_locals_forward[] = "gauss.<locals>.forward";
 static const char __pyx_k_gauss_locals_backward[] = "gauss.<locals>.backward";
@@ -1445,15 +1431,13 @@ static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_n_s_d;
 static PyObject *__pyx_n_s_dtype;
-static PyObject *__pyx_n_s_end;
-static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_forward;
 static PyObject *__pyx_n_s_g;
 static PyObject *__pyx_n_s_gauss;
+static PyObject *__pyx_n_s_gauss_cython;
+static PyObject *__pyx_kp_s_gauss_cython_pyx;
 static PyObject *__pyx_n_s_gauss_locals_backward;
 static PyObject *__pyx_n_s_gauss_locals_forward;
-static PyObject *__pyx_n_s_gauss_module;
-static PyObject *__pyx_kp_s_gauss_module_pyx;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_j;
@@ -1464,18 +1448,16 @@ static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_n;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_numpy;
-static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reversed;
 static PyObject *__pyx_n_s_sum;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_kp_s_was_imported;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
-static PyObject *__pyx_tp_new_12gauss_module___pyx_scope_struct__gauss(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_12gauss_cython_5gauss_forward(PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12gauss_cython_5gauss_2backward(PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12gauss_cython_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
+static PyObject *__pyx_tp_new_12gauss_cython___pyx_scope_struct__gauss(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_tuple_;
@@ -1486,7 +1468,7 @@ static PyObject *__pyx_codeobj__4;
 static PyObject *__pyx_codeobj__6;
 /* Late includes */
 
-/* "gauss_module.pyx":4
+/* "gauss_cython.pyx":4
  * 
  * 
  * def gauss(a, b):             # <<<<<<<<<<<<<<
@@ -1495,9 +1477,9 @@ static PyObject *__pyx_codeobj__6;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gauss_module_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_12gauss_module_1gauss = {"gauss", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gauss_module_1gauss, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_12gauss_module_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12gauss_cython_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_12gauss_cython_1gauss = {"gauss", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gauss_cython_1gauss, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12gauss_cython_1gauss(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_a = 0;
   PyObject *__pyx_v_b = 0;
   int __pyx_lineno = 0;
@@ -1548,18 +1530,18 @@ static PyObject *__pyx_pw_12gauss_module_1gauss(PyObject *__pyx_self, PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("gauss", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 4, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gauss_module.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gauss_cython.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12gauss_module_gauss(__pyx_self, __pyx_v_a, __pyx_v_b);
+  __pyx_r = __pyx_pf_12gauss_cython_gauss(__pyx_self, __pyx_v_a, __pyx_v_b);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "gauss_module.pyx":8
+/* "gauss_cython.pyx":8
  *     b = b.copy()
  * 
  *     def forward():             # <<<<<<<<<<<<<<
@@ -1568,22 +1550,22 @@ static PyObject *__pyx_pw_12gauss_module_1gauss(PyObject *__pyx_self, PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gauss_module_5gauss_1forward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_12gauss_module_5gauss_1forward = {"forward", (PyCFunction)__pyx_pw_12gauss_module_5gauss_1forward, METH_NOARGS, 0};
-static PyObject *__pyx_pw_12gauss_module_5gauss_1forward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12gauss_cython_5gauss_1forward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_12gauss_cython_5gauss_1forward = {"forward", (PyCFunction)__pyx_pw_12gauss_cython_5gauss_1forward, METH_NOARGS, 0};
+static PyObject *__pyx_pw_12gauss_cython_5gauss_1forward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("forward (wrapper)", 0);
-  __pyx_r = __pyx_pf_12gauss_module_5gauss_forward(__pyx_self);
+  __pyx_r = __pyx_pf_12gauss_cython_5gauss_forward(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *__pyx_cur_scope;
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *__pyx_outer_scope;
+static PyObject *__pyx_pf_12gauss_cython_5gauss_forward(PyObject *__pyx_self) {
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *__pyx_cur_scope;
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *__pyx_outer_scope;
   Py_ssize_t __pyx_v_n;
   PyObject *__pyx_v_m = NULL;
   PyObject *__pyx_v_c = NULL;
@@ -1611,10 +1593,10 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("forward", 0);
-  __pyx_outer_scope = (struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "gauss_module.pyx":9
+  /* "gauss_cython.pyx":9
  * 
  *     def forward():
  *         n = len(a)             # <<<<<<<<<<<<<<
@@ -1628,7 +1610,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_n = __pyx_t_2;
 
-  /* "gauss_module.pyx":10
+  /* "gauss_cython.pyx":10
  *     def forward():
  *         n = len(a)
  *         m = len(a[0])             # <<<<<<<<<<<<<<
@@ -1645,7 +1627,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __pyx_v_m = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":12
+  /* "gauss_cython.pyx":12
  *         m = len(a[0])
  * 
  *         c = numpy.zeros((n, m + 1))             # <<<<<<<<<<<<<<
@@ -1688,7 +1670,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __pyx_v_c = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":14
+  /* "gauss_cython.pyx":14
  *         c = numpy.zeros((n, m + 1))
  * 
  *         for i in range(n):             # <<<<<<<<<<<<<<
@@ -1743,7 +1725,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "gauss_module.pyx":15
+    /* "gauss_cython.pyx":15
  * 
  *         for i in range(n):
  *             c[i, m] = b[i]             # <<<<<<<<<<<<<<
@@ -1765,7 +1747,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "gauss_module.pyx":16
+    /* "gauss_cython.pyx":16
  *         for i in range(n):
  *             c[i, m] = b[i]
  *             for j in range(m):             # <<<<<<<<<<<<<<
@@ -1817,7 +1799,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "gauss_module.pyx":17
+      /* "gauss_cython.pyx":17
  *             c[i, m] = b[i]
  *             for j in range(m):
  *                 c[i, j] = a[i, j]             # <<<<<<<<<<<<<<
@@ -1848,7 +1830,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "gauss_module.pyx":16
+      /* "gauss_cython.pyx":16
  *         for i in range(n):
  *             c[i, m] = b[i]
  *             for j in range(m):             # <<<<<<<<<<<<<<
@@ -1858,7 +1840,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "gauss_module.pyx":14
+    /* "gauss_cython.pyx":14
  *         c = numpy.zeros((n, m + 1))
  * 
  *         for i in range(n):             # <<<<<<<<<<<<<<
@@ -1868,7 +1850,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":19
+  /* "gauss_cython.pyx":19
  *                 c[i, j] = a[i, j]
  * 
  *         i = 0             # <<<<<<<<<<<<<<
@@ -1878,7 +1860,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_XDECREF_SET(__pyx_v_i, __pyx_int_0);
 
-  /* "gauss_module.pyx":20
+  /* "gauss_cython.pyx":20
  * 
  *         i = 0
  *         g = []             # <<<<<<<<<<<<<<
@@ -1890,7 +1872,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __pyx_v_g = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":21
+  /* "gauss_cython.pyx":21
  *         i = 0
  *         g = []
  *         for j in range(0, m):             # <<<<<<<<<<<<<<
@@ -1951,7 +1933,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
     __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "gauss_module.pyx":22
+    /* "gauss_cython.pyx":22
  *         g = []
  *         for j in range(0, m):
  *             k = i             # <<<<<<<<<<<<<<
@@ -1961,7 +1943,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
     __Pyx_INCREF(__pyx_v_i);
     __Pyx_XDECREF_SET(__pyx_v_k, __pyx_v_i);
 
-    /* "gauss_module.pyx":23
+    /* "gauss_cython.pyx":23
  *         for j in range(0, m):
  *             k = i
  *             while c[k, j] == 0:             # <<<<<<<<<<<<<<
@@ -1987,7 +1969,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (!__pyx_t_10) break;
 
-      /* "gauss_module.pyx":24
+      /* "gauss_cython.pyx":24
  *             k = i
  *             while c[k, j] == 0:
  *                 while c[k, j] < 0:             # <<<<<<<<<<<<<<
@@ -2012,7 +1994,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         if (!__pyx_t_10) break;
 
-        /* "gauss_module.pyx":25
+        /* "gauss_cython.pyx":25
  *             while c[k, j] == 0:
  *                 while c[k, j] < 0:
  *                     k += 1             # <<<<<<<<<<<<<<
@@ -2026,7 +2008,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       }
     }
 
-    /* "gauss_module.pyx":26
+    /* "gauss_cython.pyx":26
  *                 while c[k, j] < 0:
  *                     k += 1
  *             if k <= n:             # <<<<<<<<<<<<<<
@@ -2041,7 +2023,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_10) {
 
-      /* "gauss_module.pyx":27
+      /* "gauss_cython.pyx":27
  *                     k += 1
  *             if k <= n:
  *                 g.append(j)             # <<<<<<<<<<<<<<
@@ -2050,7 +2032,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
  */
       __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_g, __pyx_v_j); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 27, __pyx_L1_error)
 
-      /* "gauss_module.pyx":28
+      /* "gauss_cython.pyx":28
  *             if k <= n:
  *                 g.append(j)
  *                 d = c[i, j]             # <<<<<<<<<<<<<<
@@ -2071,7 +2053,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       __Pyx_XDECREF_SET(__pyx_v_d, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "gauss_module.pyx":29
+      /* "gauss_cython.pyx":29
  *                 g.append(j)
  *                 d = c[i, j]
  *                 c[i, j] = c[k, j]             # <<<<<<<<<<<<<<
@@ -2101,7 +2083,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "gauss_module.pyx":30
+      /* "gauss_cython.pyx":30
  *                 d = c[i, j]
  *                 c[i, j] = c[k, j]
  *                 c[k, j] = d             # <<<<<<<<<<<<<<
@@ -2119,7 +2101,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       if (unlikely(PyObject_SetItem(__pyx_v_c, __pyx_t_5, __pyx_v_d) < 0)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "gauss_module.pyx":31
+      /* "gauss_cython.pyx":31
  *                 c[i, j] = c[k, j]
  *                 c[k, j] = d
  *                 i += 1             # <<<<<<<<<<<<<<
@@ -2131,7 +2113,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       __Pyx_DECREF_SET(__pyx_v_i, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "gauss_module.pyx":32
+      /* "gauss_cython.pyx":32
  *                 c[k, j] = d
  *                 i += 1
  *                 for l in range(i, n):             # <<<<<<<<<<<<<<
@@ -2194,7 +2176,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
         __Pyx_XDECREF_SET(__pyx_v_l, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "gauss_module.pyx":33
+        /* "gauss_cython.pyx":33
  *                 i += 1
  *                 for l in range(i, n):
  *                     c[l] = c[l] - c[i - 1] * c[l, j] / c[i - 1, j]             # <<<<<<<<<<<<<<
@@ -2247,7 +2229,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
         if (unlikely(PyObject_SetItem(__pyx_v_c, __pyx_v_l, __pyx_t_12) < 0)) __PYX_ERR(0, 33, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-        /* "gauss_module.pyx":32
+        /* "gauss_cython.pyx":32
  *                 c[k, j] = d
  *                 i += 1
  *                 for l in range(i, n):             # <<<<<<<<<<<<<<
@@ -2257,7 +2239,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "gauss_module.pyx":26
+      /* "gauss_cython.pyx":26
  *                 while c[k, j] < 0:
  *                     k += 1
  *             if k <= n:             # <<<<<<<<<<<<<<
@@ -2266,7 +2248,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
  */
     }
 
-    /* "gauss_module.pyx":21
+    /* "gauss_cython.pyx":21
  *         i = 0
  *         g = []
  *         for j in range(0, m):             # <<<<<<<<<<<<<<
@@ -2276,7 +2258,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":34
+  /* "gauss_cython.pyx":34
  *                 for l in range(i, n):
  *                     c[l] = c[l] - c[i - 1] * c[l, j] / c[i - 1, j]
  *         return (c, g)             # <<<<<<<<<<<<<<
@@ -2296,7 +2278,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "gauss_module.pyx":8
+  /* "gauss_cython.pyx":8
  *     b = b.copy()
  * 
  *     def forward():             # <<<<<<<<<<<<<<
@@ -2312,7 +2294,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("gauss_module.gauss.forward", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gauss_cython.gauss.forward", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_m);
@@ -2328,7 +2310,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
   return __pyx_r;
 }
 
-/* "gauss_module.pyx":36
+/* "gauss_cython.pyx":36
  *         return (c, g)
  * 
  *     def backward():             # <<<<<<<<<<<<<<
@@ -2337,22 +2319,22 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_forward(PyObject *__pyx_self) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gauss_module_5gauss_3backward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_12gauss_module_5gauss_3backward = {"backward", (PyCFunction)__pyx_pw_12gauss_module_5gauss_3backward, METH_NOARGS, 0};
-static PyObject *__pyx_pw_12gauss_module_5gauss_3backward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12gauss_cython_5gauss_3backward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_12gauss_cython_5gauss_3backward = {"backward", (PyCFunction)__pyx_pw_12gauss_cython_5gauss_3backward, METH_NOARGS, 0};
+static PyObject *__pyx_pw_12gauss_cython_5gauss_3backward(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("backward (wrapper)", 0);
-  __pyx_r = __pyx_pf_12gauss_module_5gauss_2backward(__pyx_self);
+  __pyx_r = __pyx_pf_12gauss_cython_5gauss_2backward(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) {
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *__pyx_cur_scope;
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *__pyx_outer_scope;
+static PyObject *__pyx_pf_12gauss_cython_5gauss_2backward(PyObject *__pyx_self) {
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *__pyx_cur_scope;
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *__pyx_outer_scope;
   PyObject *__pyx_v_c = NULL;
   PyObject *__pyx_v_g = NULL;
   PyObject *__pyx_v_n = NULL;
@@ -2377,10 +2359,10 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("backward", 0);
-  __pyx_outer_scope = (struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "gauss_module.pyx":37
+  /* "gauss_cython.pyx":37
  * 
  *     def backward():
  *         c, g = forward()             # <<<<<<<<<<<<<<
@@ -2388,7 +2370,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
  *         m = len(a[0])
  */
   if (unlikely(!__pyx_cur_scope->__pyx_v_forward)) { __Pyx_RaiseClosureNameError("forward"); __PYX_ERR(0, 37, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_pf_12gauss_module_5gauss_forward(__pyx_cur_scope->__pyx_v_forward); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_12gauss_cython_5gauss_forward(__pyx_cur_scope->__pyx_v_forward); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
     PyObject* sequence = __pyx_t_1;
@@ -2441,7 +2423,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __pyx_v_g = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "gauss_module.pyx":38
+  /* "gauss_cython.pyx":38
  *     def backward():
  *         c, g = forward()
  *         n = len(a)             # <<<<<<<<<<<<<<
@@ -2458,7 +2440,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __pyx_v_n = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":39
+  /* "gauss_cython.pyx":39
  *         c, g = forward()
  *         n = len(a)
  *         m = len(a[0])             # <<<<<<<<<<<<<<
@@ -2475,7 +2457,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __pyx_v_m = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":40
+  /* "gauss_cython.pyx":40
  *         n = len(a)
  *         m = len(a[0])
  *         x = numpy.zeros(n, dtype=float)             # <<<<<<<<<<<<<<
@@ -2503,7 +2485,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __pyx_v_x = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "gauss_module.pyx":41
+  /* "gauss_cython.pyx":41
  *         m = len(a[0])
  *         x = numpy.zeros(n, dtype=float)
  *         x[n - 1] = c[n - 1, m] / c[n - 1, m - 1]             # <<<<<<<<<<<<<<
@@ -2548,7 +2530,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "gauss_module.pyx":43
+  /* "gauss_cython.pyx":43
  *         x[n - 1] = c[n - 1, m] / c[n - 1, m - 1]
  * 
  *         for i in reversed(range(n - 1)):             # <<<<<<<<<<<<<<
@@ -2606,7 +2588,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "gauss_module.pyx":44
+    /* "gauss_cython.pyx":44
  * 
  *         for i in reversed(range(n - 1)):
  *             sum = 0             # <<<<<<<<<<<<<<
@@ -2616,7 +2598,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_XDECREF_SET(__pyx_v_sum, __pyx_int_0);
 
-    /* "gauss_module.pyx":45
+    /* "gauss_cython.pyx":45
  *         for i in reversed(range(n - 1)):
  *             sum = 0
  *             for j in range(g[i] + 1, n):             # <<<<<<<<<<<<<<
@@ -2682,7 +2664,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
       __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "gauss_module.pyx":46
+      /* "gauss_cython.pyx":46
  *             sum = 0
  *             for j in range(g[i] + 1, n):
  *                 sum += c[i, j] * x[j]             # <<<<<<<<<<<<<<
@@ -2712,7 +2694,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
       __Pyx_DECREF_SET(__pyx_v_sum, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "gauss_module.pyx":45
+      /* "gauss_cython.pyx":45
  *         for i in reversed(range(n - 1)):
  *             sum = 0
  *             for j in range(g[i] + 1, n):             # <<<<<<<<<<<<<<
@@ -2722,7 +2704,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "gauss_module.pyx":47
+    /* "gauss_cython.pyx":47
  *             for j in range(g[i] + 1, n):
  *                 sum += c[i, j] * x[j]
  *             x[i] = (c[i, m] - sum) / c[i, i]             # <<<<<<<<<<<<<<
@@ -2761,7 +2743,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
     if (unlikely(PyObject_SetItem(__pyx_v_x, __pyx_v_i, __pyx_t_4) < 0)) __PYX_ERR(0, 47, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "gauss_module.pyx":43
+    /* "gauss_cython.pyx":43
  *         x[n - 1] = c[n - 1, m] / c[n - 1, m - 1]
  * 
  *         for i in reversed(range(n - 1)):             # <<<<<<<<<<<<<<
@@ -2771,7 +2753,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":48
+  /* "gauss_cython.pyx":48
  *                 sum += c[i, j] * x[j]
  *             x[i] = (c[i, m] - sum) / c[i, i]
  *         return x             # <<<<<<<<<<<<<<
@@ -2783,7 +2765,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __pyx_r = __pyx_v_x;
   goto __pyx_L0;
 
-  /* "gauss_module.pyx":36
+  /* "gauss_cython.pyx":36
  *         return (c, g)
  * 
  *     def backward():             # <<<<<<<<<<<<<<
@@ -2798,7 +2780,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("gauss_module.gauss.backward", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gauss_cython.gauss.backward", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_c);
@@ -2814,7 +2796,7 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
   return __pyx_r;
 }
 
-/* "gauss_module.pyx":4
+/* "gauss_cython.pyx":4
  * 
  * 
  * def gauss(a, b):             # <<<<<<<<<<<<<<
@@ -2822,8 +2804,8 @@ static PyObject *__pyx_pf_12gauss_module_5gauss_2backward(PyObject *__pyx_self) 
  *     b = b.copy()
  */
 
-static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *__pyx_cur_scope;
+static PyObject *__pyx_pf_12gauss_cython_gauss(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *__pyx_cur_scope;
   PyObject *__pyx_v_backward = 0;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_r = NULL;
@@ -2835,9 +2817,9 @@ static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_sel
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("gauss", 0);
-  __pyx_cur_scope = (struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *)__pyx_tp_new_12gauss_module___pyx_scope_struct__gauss(__pyx_ptype_12gauss_module___pyx_scope_struct__gauss, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *)__pyx_tp_new_12gauss_cython___pyx_scope_struct__gauss(__pyx_ptype_12gauss_cython___pyx_scope_struct__gauss, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 4, __pyx_L1_error)
   } else {
@@ -2850,7 +2832,7 @@ static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_b);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_b);
 
-  /* "gauss_module.pyx":5
+  /* "gauss_cython.pyx":5
  * 
  * def gauss(a, b):
  *     a = a.copy()             # <<<<<<<<<<<<<<
@@ -2879,7 +2861,7 @@ static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":6
+  /* "gauss_cython.pyx":6
  * def gauss(a, b):
  *     a = a.copy()
  *     b = b.copy()             # <<<<<<<<<<<<<<
@@ -2908,56 +2890,53 @@ static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":8
+  /* "gauss_cython.pyx":8
  *     b = b.copy()
  * 
  *     def forward():             # <<<<<<<<<<<<<<
  *         n = len(a)
  *         m = len(a[0])
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_12gauss_module_5gauss_1forward, 0, __pyx_n_s_gauss_locals_forward, ((PyObject*)__pyx_cur_scope), __pyx_n_s_gauss_module, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_12gauss_cython_5gauss_1forward, 0, __pyx_n_s_gauss_locals_forward, ((PyObject*)__pyx_cur_scope), __pyx_n_s_gauss_cython, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_forward = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":36
+  /* "gauss_cython.pyx":36
  *         return (c, g)
  * 
  *     def backward():             # <<<<<<<<<<<<<<
  *         c, g = forward()
  *         n = len(a)
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_12gauss_module_5gauss_3backward, 0, __pyx_n_s_gauss_locals_backward, ((PyObject*)__pyx_cur_scope), __pyx_n_s_gauss_module, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_12gauss_cython_5gauss_3backward, 0, __pyx_n_s_gauss_locals_backward, ((PyObject*)__pyx_cur_scope), __pyx_n_s_gauss_cython, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_backward = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":50
+  /* "gauss_cython.pyx":50
  *         return x
  * 
  *     x = backward()             # <<<<<<<<<<<<<<
  *     return x
- * 
  */
-  __pyx_t_1 = __pyx_pf_12gauss_module_5gauss_2backward(__pyx_v_backward); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_12gauss_cython_5gauss_2backward(__pyx_v_backward); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":51
+  /* "gauss_cython.pyx":51
  * 
  *     x = backward()
  *     return x             # <<<<<<<<<<<<<<
- * 
- * 
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_x);
   __pyx_r = __pyx_v_x;
   goto __pyx_L0;
 
-  /* "gauss_module.pyx":4
+  /* "gauss_cython.pyx":4
  * 
  * 
  * def gauss(a, b):             # <<<<<<<<<<<<<<
@@ -2970,7 +2949,7 @@ static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("gauss_module.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gauss_cython.gauss", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_backward);
@@ -2981,14 +2960,14 @@ static PyObject *__pyx_pf_12gauss_module_gauss(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-static struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *__pyx_freelist_12gauss_module___pyx_scope_struct__gauss[8];
-static int __pyx_freecount_12gauss_module___pyx_scope_struct__gauss = 0;
+static struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *__pyx_freelist_12gauss_cython___pyx_scope_struct__gauss[8];
+static int __pyx_freecount_12gauss_cython___pyx_scope_struct__gauss = 0;
 
-static PyObject *__pyx_tp_new_12gauss_module___pyx_scope_struct__gauss(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_12gauss_cython___pyx_scope_struct__gauss(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_12gauss_module___pyx_scope_struct__gauss > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss)))) {
-    o = (PyObject*)__pyx_freelist_12gauss_module___pyx_scope_struct__gauss[--__pyx_freecount_12gauss_module___pyx_scope_struct__gauss];
-    memset(o, 0, sizeof(struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_12gauss_cython___pyx_scope_struct__gauss > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss)))) {
+    o = (PyObject*)__pyx_freelist_12gauss_cython___pyx_scope_struct__gauss[--__pyx_freecount_12gauss_cython___pyx_scope_struct__gauss];
+    memset(o, 0, sizeof(struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -2998,22 +2977,22 @@ static PyObject *__pyx_tp_new_12gauss_module___pyx_scope_struct__gauss(PyTypeObj
   return o;
 }
 
-static void __pyx_tp_dealloc_12gauss_module___pyx_scope_struct__gauss(PyObject *o) {
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *p = (struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *)o;
+static void __pyx_tp_dealloc_12gauss_cython___pyx_scope_struct__gauss(PyObject *o) {
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *p = (struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_a);
   Py_CLEAR(p->__pyx_v_b);
   Py_CLEAR(p->__pyx_v_forward);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_12gauss_module___pyx_scope_struct__gauss < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss)))) {
-    __pyx_freelist_12gauss_module___pyx_scope_struct__gauss[__pyx_freecount_12gauss_module___pyx_scope_struct__gauss++] = ((struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_12gauss_cython___pyx_scope_struct__gauss < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss)))) {
+    __pyx_freelist_12gauss_cython___pyx_scope_struct__gauss[__pyx_freecount_12gauss_cython___pyx_scope_struct__gauss++] = ((struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_12gauss_module___pyx_scope_struct__gauss(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12gauss_cython___pyx_scope_struct__gauss(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *p = (struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *)o;
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *p = (struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *)o;
   if (p->__pyx_v_a) {
     e = (*v)(p->__pyx_v_a, a); if (e) return e;
   }
@@ -3026,9 +3005,9 @@ static int __pyx_tp_traverse_12gauss_module___pyx_scope_struct__gauss(PyObject *
   return 0;
 }
 
-static int __pyx_tp_clear_12gauss_module___pyx_scope_struct__gauss(PyObject *o) {
+static int __pyx_tp_clear_12gauss_cython___pyx_scope_struct__gauss(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *p = (struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss *)o;
+  struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *p = (struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss *)o;
   tmp = ((PyObject*)p->__pyx_v_a);
   p->__pyx_v_a = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -3041,12 +3020,12 @@ static int __pyx_tp_clear_12gauss_module___pyx_scope_struct__gauss(PyObject *o) 
   return 0;
 }
 
-static PyTypeObject __pyx_type_12gauss_module___pyx_scope_struct__gauss = {
+static PyTypeObject __pyx_type_12gauss_cython___pyx_scope_struct__gauss = {
   PyVarObject_HEAD_INIT(0, 0)
-  "gauss_module.__pyx_scope_struct__gauss", /*tp_name*/
-  sizeof(struct __pyx_obj_12gauss_module___pyx_scope_struct__gauss), /*tp_basicsize*/
+  "gauss_cython.__pyx_scope_struct__gauss", /*tp_name*/
+  sizeof(struct __pyx_obj_12gauss_cython___pyx_scope_struct__gauss), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_12gauss_module___pyx_scope_struct__gauss, /*tp_dealloc*/
+  __pyx_tp_dealloc_12gauss_cython___pyx_scope_struct__gauss, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -3073,8 +3052,8 @@ static PyTypeObject __pyx_type_12gauss_module___pyx_scope_struct__gauss = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_12gauss_module___pyx_scope_struct__gauss, /*tp_traverse*/
-  __pyx_tp_clear_12gauss_module___pyx_scope_struct__gauss, /*tp_clear*/
+  __pyx_tp_traverse_12gauss_cython___pyx_scope_struct__gauss, /*tp_traverse*/
+  __pyx_tp_clear_12gauss_cython___pyx_scope_struct__gauss, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -3089,7 +3068,7 @@ static PyTypeObject __pyx_type_12gauss_module___pyx_scope_struct__gauss = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_12gauss_module___pyx_scope_struct__gauss, /*tp_new*/
+  __pyx_tp_new_12gauss_cython___pyx_scope_struct__gauss, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -3120,17 +3099,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_gauss_module(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_gauss_cython(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_gauss_module},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_gauss_cython},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "gauss_module",
+    "gauss_cython",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -3167,15 +3146,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_n_s_d, __pyx_k_d, sizeof(__pyx_k_d), 0, 0, 1, 1},
   {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
-  {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
-  {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
   {&__pyx_n_s_forward, __pyx_k_forward, sizeof(__pyx_k_forward), 0, 0, 1, 1},
   {&__pyx_n_s_g, __pyx_k_g, sizeof(__pyx_k_g), 0, 0, 1, 1},
   {&__pyx_n_s_gauss, __pyx_k_gauss, sizeof(__pyx_k_gauss), 0, 0, 1, 1},
+  {&__pyx_n_s_gauss_cython, __pyx_k_gauss_cython, sizeof(__pyx_k_gauss_cython), 0, 0, 1, 1},
+  {&__pyx_kp_s_gauss_cython_pyx, __pyx_k_gauss_cython_pyx, sizeof(__pyx_k_gauss_cython_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_gauss_locals_backward, __pyx_k_gauss_locals_backward, sizeof(__pyx_k_gauss_locals_backward), 0, 0, 1, 1},
   {&__pyx_n_s_gauss_locals_forward, __pyx_k_gauss_locals_forward, sizeof(__pyx_k_gauss_locals_forward), 0, 0, 1, 1},
-  {&__pyx_n_s_gauss_module, __pyx_k_gauss_module, sizeof(__pyx_k_gauss_module), 0, 0, 1, 1},
-  {&__pyx_kp_s_gauss_module_pyx, __pyx_k_gauss_module_pyx, sizeof(__pyx_k_gauss_module_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_j, __pyx_k_j, sizeof(__pyx_k_j), 0, 0, 1, 1},
@@ -3186,12 +3163,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_n, __pyx_k_n, sizeof(__pyx_k_n), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
-  {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_reversed, __pyx_k_reversed, sizeof(__pyx_k_reversed), 0, 0, 1, 1},
   {&__pyx_n_s_sum, __pyx_k_sum, sizeof(__pyx_k_sum), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
-  {&__pyx_kp_s_was_imported, __pyx_k_was_imported, sizeof(__pyx_k_was_imported), 0, 0, 1, 0},
   {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
@@ -3208,7 +3183,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "gauss_module.pyx":8
+  /* "gauss_cython.pyx":8
  *     b = b.copy()
  * 
  *     def forward():             # <<<<<<<<<<<<<<
@@ -3218,9 +3193,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple_ = PyTuple_Pack(9, __pyx_n_s_n, __pyx_n_s_m, __pyx_n_s_c, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_g, __pyx_n_s_k, __pyx_n_s_d, __pyx_n_s_l); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gauss_module_pyx, __pyx_n_s_forward, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gauss_cython_pyx, __pyx_n_s_forward, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 8, __pyx_L1_error)
 
-  /* "gauss_module.pyx":36
+  /* "gauss_cython.pyx":36
  *         return (c, g)
  * 
  *     def backward():             # <<<<<<<<<<<<<<
@@ -3230,9 +3205,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(8, __pyx_n_s_c, __pyx_n_s_g, __pyx_n_s_n, __pyx_n_s_m, __pyx_n_s_x, __pyx_n_s_i, __pyx_n_s_sum, __pyx_n_s_j); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gauss_module_pyx, __pyx_n_s_backward, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gauss_cython_pyx, __pyx_n_s_backward, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 36, __pyx_L1_error)
 
-  /* "gauss_module.pyx":4
+  /* "gauss_cython.pyx":4
  * 
  * 
  * def gauss(a, b):             # <<<<<<<<<<<<<<
@@ -3242,7 +3217,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__5 = PyTuple_Pack(7, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_forward, __pyx_n_s_forward, __pyx_n_s_backward, __pyx_n_s_backward, __pyx_n_s_x); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gauss_module_pyx, __pyx_n_s_gauss, 4, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gauss_cython_pyx, __pyx_n_s_gauss, 4, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3298,14 +3273,14 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_12gauss_module___pyx_scope_struct__gauss) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_12gauss_cython___pyx_scope_struct__gauss) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_12gauss_module___pyx_scope_struct__gauss.tp_print = 0;
+  __pyx_type_12gauss_cython___pyx_scope_struct__gauss.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12gauss_module___pyx_scope_struct__gauss.tp_dictoffset && __pyx_type_12gauss_module___pyx_scope_struct__gauss.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_12gauss_module___pyx_scope_struct__gauss.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12gauss_cython___pyx_scope_struct__gauss.tp_dictoffset && __pyx_type_12gauss_cython___pyx_scope_struct__gauss.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_12gauss_cython___pyx_scope_struct__gauss.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
-  __pyx_ptype_12gauss_module___pyx_scope_struct__gauss = &__pyx_type_12gauss_module___pyx_scope_struct__gauss;
+  __pyx_ptype_12gauss_cython___pyx_scope_struct__gauss = &__pyx_type_12gauss_cython___pyx_scope_struct__gauss;
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3356,11 +3331,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initgauss_module(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initgauss_module(void)
+__Pyx_PyMODINIT_FUNC initgauss_cython(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initgauss_cython(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_gauss_module(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_gauss_module(void)
+__Pyx_PyMODINIT_FUNC PyInit_gauss_cython(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_gauss_cython(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -3427,12 +3402,11 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_gauss_module(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_gauss_cython(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -3440,7 +3414,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_gauss_module(PyObject *__pyx_pyini
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'gauss_module' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'gauss_cython' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -3455,7 +3429,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_gauss_module(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_gauss_cython(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -3492,7 +3466,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("gauss_module", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("gauss_cython", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -3510,14 +3484,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_gauss_module) {
+  if (__pyx_module_is_main_gauss_cython) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "gauss_module")) {
-      if (unlikely(PyDict_SetItemString(modules, "gauss_module", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "gauss_cython")) {
+      if (unlikely(PyDict_SetItemString(modules, "gauss_cython", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -3538,7 +3512,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "gauss_module.pyx":1
+  /* "gauss_cython.pyx":1
  * import numpy             # <<<<<<<<<<<<<<
  * 
  * 
@@ -3548,59 +3522,40 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_numpy, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":4
+  /* "gauss_cython.pyx":4
  * 
  * 
  * def gauss(a, b):             # <<<<<<<<<<<<<<
  *     a = a.copy()
  *     b = b.copy()
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12gauss_module_1gauss, NULL, __pyx_n_s_gauss_module); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12gauss_cython_1gauss, NULL, __pyx_n_s_gauss_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_gauss, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gauss_module.pyx":54
- * 
- * 
- * print(__name__, "was imported")             # <<<<<<<<<<<<<<
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
-  __Pyx_INCREF(__pyx_kp_s_was_imported);
-  __Pyx_GIVEREF(__pyx_kp_s_was_imported);
-  PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_kp_s_was_imported);
-  __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "gauss_module.pyx":1
+  /* "gauss_cython.pyx":1
  * import numpy             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /*--- Wrapped vars code ---*/
 
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init gauss_module", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init gauss_cython", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init gauss_module");
+    PyErr_SetString(PyExc_ImportError, "init gauss_cython");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -5651,149 +5606,6 @@ bad:
     Py_XDECREF(py_code);
     Py_XDECREF(py_frame);
 }
-
-/* Print */
-#if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
-static PyObject *__Pyx_GetStdout(void) {
-    PyObject *f = PySys_GetObject((char *)"stdout");
-    if (!f) {
-        PyErr_SetString(PyExc_RuntimeError, "lost sys.stdout");
-    }
-    return f;
-}
-static int __Pyx_Print(PyObject* f, PyObject *arg_tuple, int newline) {
-    int i;
-    if (!f) {
-        if (!(f = __Pyx_GetStdout()))
-            return -1;
-    }
-    Py_INCREF(f);
-    for (i=0; i < PyTuple_GET_SIZE(arg_tuple); i++) {
-        PyObject* v;
-        if (PyFile_SoftSpace(f, 1)) {
-            if (PyFile_WriteString(" ", f) < 0)
-                goto error;
-        }
-        v = PyTuple_GET_ITEM(arg_tuple, i);
-        if (PyFile_WriteObject(v, f, Py_PRINT_RAW) < 0)
-            goto error;
-        if (PyString_Check(v)) {
-            char *s = PyString_AsString(v);
-            Py_ssize_t len = PyString_Size(v);
-            if (len > 0) {
-                switch (s[len-1]) {
-                    case ' ': break;
-                    case '\f': case '\r': case '\n': case '\t': case '\v':
-                        PyFile_SoftSpace(f, 0);
-                        break;
-                    default:  break;
-                }
-            }
-        }
-    }
-    if (newline) {
-        if (PyFile_WriteString("\n", f) < 0)
-            goto error;
-        PyFile_SoftSpace(f, 0);
-    }
-    Py_DECREF(f);
-    return 0;
-error:
-    Py_DECREF(f);
-    return -1;
-}
-#else
-static int __Pyx_Print(PyObject* stream, PyObject *arg_tuple, int newline) {
-    PyObject* kwargs = 0;
-    PyObject* result = 0;
-    PyObject* end_string;
-    if (unlikely(!__pyx_print)) {
-        __pyx_print = PyObject_GetAttr(__pyx_b, __pyx_n_s_print);
-        if (!__pyx_print)
-            return -1;
-    }
-    if (stream) {
-        kwargs = PyDict_New();
-        if (unlikely(!kwargs))
-            return -1;
-        if (unlikely(PyDict_SetItem(kwargs, __pyx_n_s_file, stream) < 0))
-            goto bad;
-        if (!newline) {
-            end_string = PyUnicode_FromStringAndSize(" ", 1);
-            if (unlikely(!end_string))
-                goto bad;
-            if (PyDict_SetItem(kwargs, __pyx_n_s_end, end_string) < 0) {
-                Py_DECREF(end_string);
-                goto bad;
-            }
-            Py_DECREF(end_string);
-        }
-    } else if (!newline) {
-        if (unlikely(!__pyx_print_kwargs)) {
-            __pyx_print_kwargs = PyDict_New();
-            if (unlikely(!__pyx_print_kwargs))
-                return -1;
-            end_string = PyUnicode_FromStringAndSize(" ", 1);
-            if (unlikely(!end_string))
-                return -1;
-            if (PyDict_SetItem(__pyx_print_kwargs, __pyx_n_s_end, end_string) < 0) {
-                Py_DECREF(end_string);
-                return -1;
-            }
-            Py_DECREF(end_string);
-        }
-        kwargs = __pyx_print_kwargs;
-    }
-    result = PyObject_Call(__pyx_print, arg_tuple, kwargs);
-    if (unlikely(kwargs) && (kwargs != __pyx_print_kwargs))
-        Py_DECREF(kwargs);
-    if (!result)
-        return -1;
-    Py_DECREF(result);
-    return 0;
-bad:
-    if (kwargs != __pyx_print_kwargs)
-        Py_XDECREF(kwargs);
-    return -1;
-}
-#endif
-
-/* PrintOne */
-#if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
-static int __Pyx_PrintOne(PyObject* f, PyObject *o) {
-    if (!f) {
-        if (!(f = __Pyx_GetStdout()))
-            return -1;
-    }
-    Py_INCREF(f);
-    if (PyFile_SoftSpace(f, 0)) {
-        if (PyFile_WriteString(" ", f) < 0)
-            goto error;
-    }
-    if (PyFile_WriteObject(o, f, Py_PRINT_RAW) < 0)
-        goto error;
-    if (PyFile_WriteString("\n", f) < 0)
-        goto error;
-    Py_DECREF(f);
-    return 0;
-error:
-    Py_DECREF(f);
-    return -1;
-    /* the line below is just to avoid C compiler
-     * warnings about unused functions */
-    return __Pyx_Print(f, NULL, 0);
-}
-#else
-static int __Pyx_PrintOne(PyObject* stream, PyObject *o) {
-    int res;
-    PyObject* arg_tuple = PyTuple_Pack(1, o);
-    if (unlikely(!arg_tuple))
-        return -1;
-    res = __Pyx_Print(stream, arg_tuple, 1);
-    Py_DECREF(arg_tuple);
-    return res;
-}
-#endif
 
 /* CIntToPy */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {

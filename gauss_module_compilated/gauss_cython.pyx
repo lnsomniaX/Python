@@ -49,6 +49,3 @@ def gauss(a, b):
 
     x = backward()
     return x
-
-
-print(__name__, "was imported")
